@@ -1,0 +1,77 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <style>
+      .container { width: 70%; padding: 1.5rem; background-color: #fff;
+      border-radius: 0.5rem; box-shadow: 0px 1px 2px 0px rgba(18, 18, 23, 0.05);
+      border: var(--spacing-px, 1px) solid var(--border-gray-dark, #d0d5dd);
+      margin-top: 1rem; , text-align: center;} .headTitle{font-size: 24px; font-weight: 500;}
+      .subTitle{font-size: 16px; font-weight: 500;} .title{font-size: 16px;
+      font-weight: 400;} .mainHeading{ display: flex; flex-direction: column;
+      align-items: center; justify-content: center; margin-top: 24px;
+      margin-bottom: 24px;} .text-base { font-size: 1rem; /* 16px */
+      line-height: 1.5rem; font-weight: 400; } .text-base-bold { font-size:
+      1rem; /* 16px */ line-height: 1.5rem; font-weight: 500; } .text-sm {
+      font-size: 0.875rem; /* 14px */ line-height: 1.25rem; font-weight: 400; }
+      .text-lg-bold { font-size: 1.5rem; /* 24px */ line-height: 2rem; /* 32px
+      */ font-weight: 600; } .text-sm-bold { font-size: 0.875rem; /* 14px */
+      line-height: 1.25rem; font-weight: 600; } .text-position{ display: flex;
+      margin-top: 2rem; justify-content: end; }
+      .mainHeading2{
+        display: flex; flex-direction: column;
+      align-items: center; justify-content: center; margin-top: 24px;
+      }
+      .img-center{
+       display: flex;
+       justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="img-center"><img alt="app_logo" src="https://gwrms.telangana.gov.in/Gallery/TS_GWD_Logo.png" width="80px" height="80px" /></div>
+      <div class="mainHeading">
+        <p class="text-lg-bold"> Telangana Ground Water Department</p>
+        <p class="text-base-bold">Government of Telangana, India</p>
+        <p class="text-sm"> www.telangana-gwd.gov.in</p>
+        <div class="mainHeading2">
+          <p class="text-base-bold">
+            Notice issued under TSWALTA-2004, Rule 25</p>
+          <p class="text-base-bold">
+            Notice. No. 123/456//TSGWD/GWER-23/2023, Dt. 12/09/2023</p>
+        </div>
+      </div>
+      <div>
+        <p class="text-sm">
+          Sri. <b>{{name}}</b> S/o D/0 <b>{{father_name}}</b> Address {{address}}. Under
+          provisions of TSWALTA, Rule 25 of Rules 2004 informed and served this
+          notice on M/s ABC Corporation located at 456 Amberpet to provide the
+          following documents/information to the undersigned within in Five days
+          (continuous five days) of receiving this notice.</p>
+      </div>
+      <div>
+          {{#each data_list}}
+            <p class="text-base-bold">{{inc @index}}. {{this}}<p>
+          {{/each}}
+      </div>
+      <div>
+        <p class="text-sm">
+          If you fail to furnish above mentioned documents/certificates within
+          the stipulated time action will be initiated as per Rule 25 &
+          Groundwater Extraction Rules-2023, under TSWALTA,
+        </p>
+      </div>
+      <div>
+        <p class="text-sm-bold text-position">
+          Designated Officer
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
